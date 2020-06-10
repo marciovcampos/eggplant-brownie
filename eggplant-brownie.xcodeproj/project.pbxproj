@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		80862EA9245A2D8F00C77EBB /* Refeicao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80862EA8245A2D8F00C77EBB /* Refeicao.swift */; };
 		80862EAD245A2ECD00C77EBB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80862EAC245A2ECD00C77EBB /* Item.swift */; };
+		8097940924916F1300F42B45 /* RefeicoesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8097940824916F1300F42B45 /* RefeicoesTableViewController.swift */; };
 		80CE6447245781110084A38B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE6446245781110084A38B /* AppDelegate.swift */; };
 		80CE6449245781110084A38B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE6448245781110084A38B /* SceneDelegate.swift */; };
 		80CE644B245781110084A38B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE644A245781110084A38B /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 		80862EA7245A21DF00C77EBB /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		80862EA8245A2D8F00C77EBB /* Refeicao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refeicao.swift; sourceTree = "<group>"; };
 		80862EAC245A2ECD00C77EBB /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		8097940824916F1300F42B45 /* RefeicoesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicoesTableViewController.swift; sourceTree = "<group>"; };
 		80CE6443245781110084A38B /* eggplant-brownie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eggplant-brownie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80CE6446245781110084A38B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80CE6448245781110084A38B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				80CE644A245781110084A38B /* ViewController.swift */,
+				8097940824916F1300F42B45 /* RefeicoesTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				80862EAD245A2ECD00C77EBB /* Item.swift in Sources */,
 				80CE644B245781110084A38B /* ViewController.swift in Sources */,
 				80CE6447245781110084A38B /* AppDelegate.swift in Sources */,
+				8097940924916F1300F42B45 /* RefeicoesTableViewController.swift in Sources */,
 				80CE6449245781110084A38B /* SceneDelegate.swift in Sources */,
 				80862EA9245A2D8F00C77EBB /* Refeicao.swift in Sources */,
 			);
