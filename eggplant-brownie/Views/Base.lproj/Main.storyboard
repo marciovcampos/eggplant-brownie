@@ -52,7 +52,7 @@
                     <navigationItem key="navigationItem" id="zfU-Jo-fFi">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="8d5-7P-r3X">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="Fcb-ed-xA1"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="adicionarRefeicao" id="Fcb-ed-xA1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
