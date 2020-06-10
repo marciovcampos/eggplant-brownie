@@ -30,4 +30,15 @@ class RefeicoesTableViewController: UITableViewController {
          return cell
      }
     
+    func add(_ refeicao: Refeicao){
+        refeicoes.append(refeicao)
+        tableView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let viewController =  segue.destination as? ViewController{
+            viewController.tableViewController = self
+        }
+    }
+    
 }
