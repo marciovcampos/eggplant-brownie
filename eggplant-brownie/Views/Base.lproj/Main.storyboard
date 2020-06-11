@@ -116,6 +116,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="cEe-Jk-r7u"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="r0a-Ad-3ku"/>
                                 </connections>
                             </tableView>
                         </subviews>
