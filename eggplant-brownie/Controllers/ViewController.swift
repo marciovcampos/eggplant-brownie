@@ -29,6 +29,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet var felicidadeTextField: UITextField?
     
+    // MARK: View life cycle
+    
+    override func viewDidLoad(){
+        let botaoAdicionarItem = UIBarButtonItem(title: "Add Item",
+                                                 style: .plain, target: self, action: #selector(adicionarItem))
+        navigationItem.rightBarButtonItem = botaoAdicionarItem
+    }
+    
+    @objc func adicionarItem(){
+        print("adicionar novo item na lista")
+    }
+    
     // MARK: UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
