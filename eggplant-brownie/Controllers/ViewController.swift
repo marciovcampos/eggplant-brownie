@@ -99,11 +99,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func adicionar(_ sender: Any) {
         
         guard let nomeDaRefeicao = nomeTextField?.text else{
+            Alerta(controller: self).exibe(mensagem: "Erro ao ler o campo nome")
             return
         }
         
         guard let felicidadeDaRefeicao = felicidadeTextField?.text,
             let felicidade = Int(felicidadeDaRefeicao) else {
+                Alerta(controller: self).exibe(mensagem: "Erro ao ler o campo felicidade")
             return
         }
         
