@@ -47,7 +47,7 @@ class RefeicoesTableViewController: UITableViewController, AddRefeicaoDelegate {
             
             let refeicao = refeicoes[indexPath.row]
             
-            let alerta = UIAlertController(title: refeicao.nome, message: "Felicidade: \(refeicao.felicidade)", preferredStyle: .alert)
+            let alerta = UIAlertController(title: refeicao.nome, message: refeicao.detalhes(), preferredStyle: .alert)
             
             let botaoCancelar = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alerta.addAction(botaoCancelar)
