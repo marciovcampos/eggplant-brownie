@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		801C464124940E6D005B5124 /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801C464024940E6D005B5124 /* Alerta.swift */; };
+		801C4643249422DE005B5124 /* RemoveRefeicaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801C4642249422DE005B5124 /* RemoveRefeicaoViewController.swift */; };
 		80862EA9245A2D8F00C77EBB /* Refeicao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80862EA8245A2D8F00C77EBB /* Refeicao.swift */; };
 		80862EAD245A2ECD00C77EBB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80862EAC245A2ECD00C77EBB /* Item.swift */; };
 		8097940924916F1300F42B45 /* RefeicoesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8097940824916F1300F42B45 /* RefeicoesTableViewController.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		801C464024940E6D005B5124 /* Alerta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
+		801C4642249422DE005B5124 /* RemoveRefeicaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveRefeicaoViewController.swift; sourceTree = "<group>"; };
 		80862EA7245A21DF00C77EBB /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		80862EA8245A2D8F00C77EBB /* Refeicao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refeicao.swift; sourceTree = "<group>"; };
 		80862EAC245A2ECD00C77EBB /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				80FB11092492849B00959020 /* AdicionarItensViewController.swift */,
 				80CE644A245781110084A38B /* ViewController.swift */,
 				8097940824916F1300F42B45 /* RefeicoesTableViewController.swift */,
+				801C4642249422DE005B5124 /* RemoveRefeicaoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				801C464124940E6D005B5124 /* Alerta.swift in Sources */,
 				80862EAD245A2ECD00C77EBB /* Item.swift in Sources */,
 				80CE644B245781110084A38B /* ViewController.swift in Sources */,
+				801C4643249422DE005B5124 /* RemoveRefeicaoViewController.swift in Sources */,
 				80FB110B2492849B00959020 /* AdicionarItensViewController.swift in Sources */,
 				80CE6447245781110084A38B /* AppDelegate.swift in Sources */,
 				8097940924916F1300F42B45 /* RefeicoesTableViewController.swift in Sources */,

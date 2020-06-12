@@ -47,21 +47,11 @@ class RefeicoesTableViewController: UITableViewController, AddRefeicaoDelegate {
             
             let refeicao = refeicoes[indexPath.row]
             
-            func removeRefeicao(alerta: UIAlertAction){
-                  refeicoes.remove(at: indexPath.row)
-                  tableView.reloadData()
-              }
-            
-            let alerta = UIAlertController(title: refeicao.nome, message: refeicao.detalhes(), preferredStyle: .alert)
-            
-            let botaoCancelar = UIAlertAction(title: "Cancelar", style: .cancel)
-            alerta.addAction(botaoCancelar)
-            
-            let botaoRemover = UIAlertAction(title: "Remover", style: .destructive, handler: removeRefeicao)
-            alerta.addAction(botaoRemover)
-            
-            present(alerta, animated: true, completion: nil)
-            
+            RemoveRefeicaoViewController(controller: self).exibe(refeicao, handler: {
+                    alerta in
+                    self.refeicoes.remove(at: indexPath.row)
+                    self.tableView.reloadData()
+            })
         }
     }
     
