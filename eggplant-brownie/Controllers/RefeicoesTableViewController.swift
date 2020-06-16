@@ -15,9 +15,7 @@ class RefeicoesTableViewController: UITableViewController, AddRefeicaoDelegate {
                      Refeicao(nome: "Macarrão", felicidade: 3)]
     
     override func viewDidLoad() {
-        guard let diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
-        
-        let caminho = diretorio.appendingPathComponent("refeicao")
+        guard let caminho = recuperaCaminho() else { return }
         
         do{
             let dados = try Data(contentsOf: caminho)
@@ -27,6 +25,12 @@ class RefeicoesTableViewController: UITableViewController, AddRefeicaoDelegate {
             print(error.localizedDescription)
         }
         
+    }
+    
+    func recuperaCaminho() -> URL? {
+        guard let diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
+        let caminho = diretorio.appendingPathComponent("refeicao")
+        return caminho
     }
 
      // MARK: - UITableViewDataSource
@@ -50,10 +54,8 @@ class RefeicoesTableViewController: UITableViewController, AddRefeicaoDelegate {
     
     func add(_ refeicao: Refeicao){
         refeicoes.append(refeicao)
-        
-        guard let diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
-        
-        let caminho = diretorio.appendingPathComponent("refeicao")
+
+        guard let caminho = recuperaCaminho() else { return }
         
         do{
             let dados = try NSKeyedArchiver.archivedData(withRootObject: refeicoes, requiringSecureCoding: false)
