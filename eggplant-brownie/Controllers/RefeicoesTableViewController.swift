@@ -10,27 +10,10 @@ import UIKit
 
 class RefeicoesTableViewController: UITableViewController, AddRefeicaoDelegate {
     
-    var refeicoes = [Refeicao(nome: "Beringela", felicidade: 1),
-                     Refeicao(nome: "Pizza", felicidade: 5),
-                     Refeicao(nome: "Macarrão", felicidade: 3)]
+    var refeicoes: [Refeicao] = []
     
     override func viewDidLoad() {
-        guard let caminho = recuperaCaminho() else { return }
-        
-        do{
-            let dados = try Data(contentsOf: caminho)
-            guard let refeicoesSalvas = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(dados) as? Array<Refeicao> else { return }
-            refeicoes = refeicoesSalvas
-        } catch {
-            print(error.localizedDescription)
-        }
-        
-    }
-    
-    func recuperaCaminho() -> URL? {
-        guard let diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
-        let caminho = diretorio.appendingPathComponent("refeicao")
-        return caminho
+        refeicoes = RefeicaoDao().recupera()
     }
 
      // MARK: - UITableViewDataSource
@@ -54,17 +37,8 @@ class RefeicoesTableViewController: UITableViewController, AddRefeicaoDelegate {
     
     func add(_ refeicao: Refeicao){
         refeicoes.append(refeicao)
-
-        guard let caminho = recuperaCaminho() else { return }
-        
-        do{
-            let dados = try NSKeyedArchiver.archivedData(withRootObject: refeicoes, requiringSecureCoding: false)
-            try dados.write(to: caminho)
-        } catch {
-            print(error.localizedDescription)
-        }
-        
         tableView.reloadData()
+        RefeicaoDao().save(refeicoes)
     }
     
     @objc func mostrarDetalhes(_ gesture: UILongPressGestureRecognizer){
